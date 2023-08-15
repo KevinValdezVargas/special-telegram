@@ -174,7 +174,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtEspecialidad">
+   <widget class="QLineEdit" name="txtId">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -184,7 +184,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="txtRegistrar">
+   <widget class="QPushButton" name="btnRegistrar">
     <property name="geometry">
      <rect>
       <x>590</x>
@@ -260,7 +260,7 @@
      <string>MODIFICAR</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QTableWidget" name="tblMedicos">
     <property name="geometry">
      <rect>
       <x>30</x>
