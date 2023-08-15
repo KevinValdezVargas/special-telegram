@@ -5,10 +5,10 @@ from Controller.controllerArea import *
 
 aArea = arregloArea()
 
-class ventanaArea(QtWidgets.QMainwinodw):
+class ventanaArea(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaArea,self).__init__(parent)
-        uic.loadUi("",self)
+        uic.loadUi("UI/ventanaArea.ui",self)
         #COLOCAR LOS BOTONES(btn)
         self.listarDatos()
         self.show()

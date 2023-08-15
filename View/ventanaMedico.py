@@ -8,7 +8,7 @@ aMed = arregloMedico()
 class ventanaMedico(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaMedico,self).__init__(parent)
-        uic.loadUi("",self)
+        uic.loadUi("UI/ventanaMedico.ui",self)
         #COLOCAR LOS BOTONES(btn)
         self.listarDatos()
         self.show()
