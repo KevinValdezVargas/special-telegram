@@ -10,26 +10,26 @@ class ventanaMedico(QtWidgets.QMainWindow):
         super(ventanaMedico,self).__init__(parent)
         uic.loadUi("UI/ventanaMedico.ui",self)
         #COLOCAR LOS BOTONES(btn)
-        self.listarDatos()
+        # self.listarDatos()
         self.show()
 
-    def obtenerCodigo(self):
-        return self
-
-    def obtenerNombres(self):
-        return self
-
-    def obtenerApellidos(self):
-        return self
-
-    def obtenerCmp(self):
-        return self
-
-    def obtenerIdEspecialidad(self):
-        return self
-
-    def listarDatos(self):
-        self #COLOCAR LOS TABLES(tbl)
+    # def obtenerCodigo(self):
+    #     return self
+    #
+    # def obtenerNombres(self):
+    #     return self
+    #
+    # def obtenerApellidos(self):
+    #     return self
+    #
+    # def obtenerCmp(self):
+    #     return self
+    #
+    # def obtenerIdEspecialidad(self):
+    #     return self
+    #
+    # def listarDatos(self):
+    #     self #COLOCAR LOS TABLES(tbl)
 
     def grabar(self):
         try:
