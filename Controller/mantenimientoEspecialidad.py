@@ -17,7 +17,7 @@ class arregloEspecialidad:
 
     def buscarEspecialidad(self, idEspecialidad):
         for i in range(self.tamañoMantenimientoEspecialidad()):
-            if idEspecialidad == self.dataArea[i].getIdEspecialidad():
+            if idEspecialidad == self.dataEspecialidad[i].getIdEspecialidad():
                 return i
         return -1
 

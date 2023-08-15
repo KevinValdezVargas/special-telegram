@@ -10,7 +10,7 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
         super(ventanaEspecialidad,self).__init__(parent)
         uic.loadUi("UI/ventanaEspecialidad.ui",self)
         self.btnRegistrar.clicked.connect(self.registrar)
-        #self.btnEliminar.clicked.connect(self.eliminar)
+        self.btnEliminar.clicked.connect(self.eliminar)
         #self.btnModificar.clicked.connect(self.modificar)
         #self.btnActualizar.clicked.connect(self.actualizar)
         self.listarDatos()
@@ -50,22 +50,22 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
         QtWidgets.QMessageBox.information(self,"Registrar Especialidad",
         "Especialidad Registrada con Exito", QtWidgets.QMessageBox.Ok)
 
-    # def eliminar(self):
-    #     if aEspe.tamañoMantenimientoEspecialidad() == 0:
-    #          QtWidgets.QMessageBox.information(self,"Eliminar Especialidad",
-    #         "No existe Especialidad seleccionada para eliminar", QtWidgets.QMessageBox.Ok)
-    #     else:
-    #         fila = self.tblEspecialidad.selectedItems()
-    #         if fila:
-    #             indiceFila = fila[0].row()
-    #             idEspecialidad = self.tblEspecialidad.item(indiceFila, 0).text()
-    #             pos = aEspe.buscarEspecialidad(idEspecialidad)
-    #             aEspe.eliminarEspecialidad(pos)
-    #             aEspe.grabar()
-    #             self.listarDatos
-    #         else:
-    #             QtWidgets.QMessageBox.information(self,"Eliminar Especialidad",
-    #             "Hubo un error al tratar de eliminar la especialidad", QtWidgets.QMessageBox.Ok)
+    def eliminar(self):
+         if aEspe.tamañoMantenimientoEspecialidad() == 0:
+              QtWidgets.QMessageBox.information(self,"Eliminar Especialidad",
+             "No existe Especialidad seleccionada para eliminar", QtWidgets.QMessageBox.Ok)
+         else:
+            fila = self.tblEspecialidad.selectedItems()
+            if fila:
+                indiceFila = fila[0].row()
+                idEspecialidad = self.tblEspecialidad.item(indiceFila, 0).text()
+                pos = aEspe.buscarEspecialidad(idEspecialidad)
+                aEspe.eliminarEspecialidad(pos)
+                aEspe.grabar()
+                self.listarDatos()
+            else:
+                QtWidgets.QMessageBox.information(self,"Eliminar Especialidad",
+                "Hubo un error al tratar de eliminar la especialidad", QtWidgets.QMessageBox.Ok)
     #
     # def modificar(self):
     #     if aEspe.tamañoMantenimientoEspecialidad() == 0:
