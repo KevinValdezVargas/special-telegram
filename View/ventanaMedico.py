@@ -66,6 +66,7 @@ class ventanaMedico(QtWidgets.QMainWindow):
                 indiceFila = fila[0].row()
                 codigo = self.tblMedicos.item(indiceFila, 0).text()
                 pos = aMed.buscarMedico(codigo)
+                aMed.eliminarMedico(pos)
                 aMed.grabar()
                 self.listarDatos()
             else:
