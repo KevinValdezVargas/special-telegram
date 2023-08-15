@@ -10,10 +10,10 @@ class ventanaArea(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaArea,self).__init__(parent)
         uic.loadUi("UI/ventanaArea.ui",self)
-        self.btnRegistrar.clicked.connect(self.registrar)
-        self.btnEliminar.clicked.connect(self.eliminar)
-        self.btnModificar.clicked.connect(self.modificar)
-        self.btnActualizar.clicked.connect(self.grabar)
+        # self.btnRegistrar.clicked.connect(self.registrar)
+        # self.btnEliminar.clicked.connect(self.eliminar)
+        # self.btnModificar.clicked.connect(self.modificar)
+        # self.btnActualizar.clicked.connect(self.grabar)
 
         self.listarDatos()
         self.show()
