@@ -15,7 +15,7 @@ class controllerEspecialidad:
 
     #METODO SET
 
-    def setIdEspecialida(self, idEspecialidad):
+    def setIdEspecialidad(self, idEspecialidad):
         self.__idEspecialidad = idEspecialidad
     
     def setEspecialidad(self, especialidad):

@@ -9,15 +9,18 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaEspecialidad,self).__init__(parent)
         uic.loadUi("UI/ventanaEspecialidad.ui",self)
-        #COLOCAR LOS BOTONES(btn)
+        #self.btnRegistrar().clicked.connect(self.registrar)
+        #self.btnEliminar().clicked.connect(self.eliminar)
+        #self.btnModificar().clicked.connect(self.modificar)
+        #self.btnActualizar().clicked.connect(self.actualizar)
         self.listarDatos()
         self.show()
 
     # def obtenerIdEspecialidad(self):
-    #     return self
+    #     return self.txtId.text()
     #
     # def obtenerEspecialidad(self):
-    #     return self
+    #     return self.txtEspecialidad.text()
 
     def listarDatos(self):
         self.tblEspecialidad.setRowCount(aEspe.tamañoMantenimientoEspecialidad())
@@ -41,7 +44,7 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
     #
     # def registrar(self):
     #     objEspe = controllerEspecialidad(self.obtenerIdEspecialidad(), self.obtenerEspecialidad())
-    #     aEspe.adicionarEspecialidad(objEspe )
+    #     aEspe.adicionarEspecialidad(objEspe)
     #     aEspe.grabar()
     #     self.ListarDatos()
     #     QtWidgets.QMessageBox.information(self,"Registrar Especialidad",
@@ -69,10 +72,10 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
     #         QtWidgets.QMessageBox.information(self, "Modificar Especialidad...",
     #         "No se encontraron registros para el ID Ingresado a buscar", QtWidgets.QMessageBox.Ok)
     #     else:
-    #         idEspe, _ =QtWidgets.QInputDialog.getText(self,"Buscar Especialidad", "Ingrese el ID a Modificar")
+    #         idEspe, _ = QtWidgets.QInputDialog.getText(self,"Buscar Especialidad", "Ingrese el ID a Modificar")
     #         pos = aEspe.buscarEspecialidad(idEspe)
     #
     #         if pos != -1:
     #             objEspe = aEspe.devolverEspecialidad(pos)
-    #             self.txt.setText(objEspe.getIdEspecialidad())
-    #             self.txt.setText(objEspe.getEspecialidad())
+    #             self.txtId.setText(objEspe.getIdEspecialidad())
+    #             self.txtEspecialidad.setText(objEspe.setEspecialidad())
