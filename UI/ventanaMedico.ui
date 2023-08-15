@@ -292,6 +292,11 @@
     </column>
     <column>
      <property name="text">
+      <string>CMP</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
       <string>ID ESPECIALIDAD</string>
      </property>
     </column>
