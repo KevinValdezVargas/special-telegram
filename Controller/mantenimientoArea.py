@@ -46,8 +46,8 @@ class arregloArea:
     def grabar(self):
         archivo = open("Model/area.txt", "w+", encoding="UTF-8")
         for i in range(self.tamañoMantenimientoArea()):
-            archivo.write(str(self.devolverArea(i).getDni()) + ","
-            + str(self.devolverArea(i).getnumeroOficinas()) + ","
-            + str(self.devolverArea(i).getnumeroCamas()) + ","
+            archivo.write(str(self.devolverArea(i).getIdArea()) + ","
+            + str(self.devolverArea(i).getNumeroOficinas()) + ","
+            + str(self.devolverArea(i).getNumeroCamas()) + ","
             + str(self.devolverArea(i).getMt2()) + "\n")
         archivo.close()

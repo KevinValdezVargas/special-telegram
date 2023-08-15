@@ -10,7 +10,9 @@ class ventanaArea(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaArea,self).__init__(parent)
         uic.loadUi("UI/ventanaArea.ui",self)
-        # self.btnRegistrar.clicked.connect(self.registrar)
+
+        self.btnRegistrar.clicked.connect(self.registrar)
+
         # self.btnEliminar.clicked.connect(self.eliminar)
         # self.btnModificar.clicked.connect(self.modificar)
         # self.btnActualizar.clicked.connect(self.grabar)
@@ -18,17 +20,17 @@ class ventanaArea(QtWidgets.QMainWindow):
         self.listarDatos()
         self.show()
     
-    #def obtenerIdArea(self):
-    #    return self.txtId.text()
+    def obtenerIdArea(self):
+        return self.txtId.text()
 
-    #def obtenerNumeroOficinas(self):
-    #    return self.txtNumeroOficinas.text()
+    def obtenerNumeroOficinas(self):
+        return self.txtNumeroOficinas.text()
 
-    #def obtenerNumeroCamas(self):
-    #    return self.txtNumeroCamas.text()
+    def obtenerNumeroCamas(self):
+        return self.txtNumeroCamas.text()
     
-    #def obtenerMt2(self):
-    #    return self.txtMt2()
+    def obtenerMt2(self):
+        return self.txtMt2.text()
 
     def listarDatos(self):
          self.tblAreas.setRowCount(aArea.tamañoMantenimientoArea())
@@ -54,13 +56,13 @@ class ventanaArea(QtWidgets.QMainWindow):
     #     except:
     #         QtWidgets.QMessageBox.information(self,"Registrar Área", "Ha ocurrido un error al registrar el Área", QtWidgets.QMessageBox.Ok)
     #
-    # def registrar(self):
-    #     objArea = controllerArea(self.obtenerIdArea(), self.obtenerNumeroOficinas(), self.obtenerNumeroCamas(), self.obtenerMt2())
-    #     aArea.adicionarArea(objArea)
-    #     aArea.grabar()
-    #     self.ListarDatos()
-    #     QtWidgets.QMessageBox.information(self,"Registrar Área",
-    #     "Área Registrada con Exito", QtWidgets.QMessageBox.Ok)
+    def registrar(self):
+         objArea = controllerArea(self.obtenerIdArea(), self.obtenerNumeroOficinas(), self.obtenerNumeroCamas(), self.obtenerMt2())
+         aArea.adicionarArea(objArea)
+         aArea.grabar()
+         self.listarDatos()
+         QtWidgets.QMessageBox.information(self,"Registrar Área",
+         "Área Registrada con Exito", QtWidgets.QMessageBox.Ok)
     #
     # def eliminar(self):
     #     if aArea.tamañoMantenimientoArea() == 0:

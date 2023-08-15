@@ -114,7 +114,8 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtNumeroOficinas">
@@ -128,7 +129,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtNumeroCamas">
@@ -142,7 +144,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtMt2">
@@ -156,7 +159,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QTableWidget" name="tblAreas">
@@ -180,6 +184,7 @@ background-color: #303030;
 QHeaderView::section{
 background-color: #303030;
 color: white;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
 
 }</string>
     </property>

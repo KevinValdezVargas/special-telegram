@@ -35,7 +35,9 @@
    <string>Sistema Clinica</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(220, 255, 243);</string>
+   <string notr="true">background-color: rgb(220, 255, 243);
+selection-background-color:#303030;
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
