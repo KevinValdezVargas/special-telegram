@@ -29,10 +29,10 @@ class controllerArea:
     def setIdArea(self,idArea):
         self.__idArea = idArea
 
-    def setnumeroOficinas(self,numeroOficinas):
+    def setNumeroOficinas(self,numeroOficinas):
         self.__numeroOficinas = numeroOficinas
     
-    def setnumeroCamas(self,numeroCamas):
+    def setNumeroCamas(self,numeroCamas):
         self.__numeroCamas = numeroCamas
 
     def setMt2(self,mt2):
