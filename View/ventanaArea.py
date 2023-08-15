@@ -16,10 +16,10 @@ class ventanaArea(QtWidgets.QMainWindow):
     def obtenerIdArea(self):
         return self
 
-    def obtenerN_Oficinas(self):
+    def obtenerNumeroOficinas(self):
         return self
 
-    def obtenerN_Camas(self):
+    def obtenerNumeroCamas(self):
         return self
     
     def obtenerMt2(self):
@@ -32,16 +32,16 @@ class ventanaArea(QtWidgets.QMainWindow):
 
         for i in range(0, aArea.tamañoMantenimientoArea()):
             self.tblAreas.setItem(i,0,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getIdArea()))
-            self.tblAreas.setItem(i,1,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getN_Oficinas()))
-            self.tblAreas.setItem(i,2,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getN_Camas()))
+            self.tblAreas.setItem(i,1,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getNumeroOficinas()))
+            self.tblAreas.setItem(i,2,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getNumeroCamas()))
             self.tblAreas.setItem(i,3,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getMt2()))
     
     def grabar(self):
         try:
             pos = aArea.buscarArea(self.obtenerIdArea())
             objArea = aArea.devolverArea(pos)
-            objArea.setN_Oficinas(self.obtenerN_Oficinas())
-            objArea.setN_camas(self.obtenerN_Camas())
+            objArea.setNumeroOficinas(self.obtenerNumeroOficinas())
+            objArea.setNumeroCamas(self.obtenerNumeroCamas())
             objArea.setMt2(self.obtenerMt2())
             aArea.grabar()
             self.listarDatos()
@@ -49,7 +49,7 @@ class ventanaArea(QtWidgets.QMainWindow):
             QtWidgets.QMessageBox.information(self,"Registrar Área", "Ha ocurrido un error al registrar el Área", QtWidgets.QMessageBox.Ok)
     
     def registrar(self):
-        objArea = controllerArea(self.obtenerIdArea(), self.obtenerN_Oficinas(), self.obtenerN_Camas(), self.obtenerMt2())
+        objArea = controllerArea(self.obtenerIdArea(), self.obtenerNumeroOficinas(), self.obtenerNumeroCamas(), self.obtenerMt2())
         aArea.adicionarArea(objArea)
         aArea.grabar()
         self.ListarDatos()
@@ -84,6 +84,6 @@ class ventanaArea(QtWidgets.QMainWindow):
             if pos != -1:
                 objArea = aArea.devolverArea(pos)
                 self.txt.setText(objArea.getIdArea())
-                self.txt.setText(objArea.getN_Oficinas())
-                self.txt.setText(objArea.getN_Camas())
+                self.txt.setText(objArea.getNumeroOficinas())
+                self.txt.setText(objArea.getNumeroCamas())
                 self.txt.setText(objArea.getMt2())
