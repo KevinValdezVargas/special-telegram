@@ -5,10 +5,10 @@ from Controller.controllerEspecialidad import *
 
 aEspe = arregloEspecialidad()
 
-class ventanaEspecialidad(QtWidgets.QMainwinodw):
+class ventanaEspecialidad(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaEspecialidad,self).__init__(parent)
-        uic.loadUi("",self)
+        uic.loadUi("UI/ventanaEspecialidad.ui",self)
         #COLOCAR LOS BOTONES(btn)
         self.listarDatos()
         self.show()
