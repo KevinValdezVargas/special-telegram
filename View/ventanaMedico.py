@@ -11,9 +11,8 @@ class ventanaMedico(QtWidgets.QMainWindow):
         uic.loadUi("UI/ventanaMedico.ui",self)
         self.btnRegistrar.clicked.connect(self.registrar)
         self.btnEliminar.clicked.connect(self.eliminar)
-        
-        # self.btnModificar.clicked.connect(self.modificar)
-        # self.btnActualizar.clicked.connect(self.grabar)
+        self.btnModificar.clicked.connect(self.modificar)
+        self.btnActualizar.clicked.connect(self.grabar)
         self.listarDatos()
         self.show()
 
