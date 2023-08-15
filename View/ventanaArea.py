@@ -12,8 +12,8 @@ class ventanaArea(QtWidgets.QMainWindow):
         uic.loadUi("UI/ventanaArea.ui",self)
 
         self.btnRegistrar.clicked.connect(self.registrar)
+        self.btnEliminar.clicked.connect(self.eliminar)
 
-        # self.btnEliminar.clicked.connect(self.eliminar)
         # self.btnModificar.clicked.connect(self.modificar)
         # self.btnActualizar.clicked.connect(self.grabar)
 
@@ -63,23 +63,23 @@ class ventanaArea(QtWidgets.QMainWindow):
          self.listarDatos()
          QtWidgets.QMessageBox.information(self,"Registrar Área",
          "Área Registrada con Exito", QtWidgets.QMessageBox.Ok)
-    #
-    # def eliminar(self):
-    #     if aArea.tamañoMantenimientoArea() == 0:
-    #          QtWidgets.QMessageBox.information(self,"Eliminar Área",
-    #         "No existe Área seleccionada para eliminar", QtWidgets.QMessageBox.Ok)
-    #     else:
-    #         fila = self.tblAreas.selectedItems()
-    #         if fila:
-    #             indiceFila = fila[0].row()
-    #             idArea = self.tblAreas.item(indiceFila, 0).text()
-    #             pos = aArea.buscarArea(idArea)
-    #             aArea.eliminarArea(pos)
-    #             aArea.grabar()
-    #             self.listarDatos
-    #         else:
-    #             QtWidgets.QMessageBox.information(self,"Eliminar Área",
-    #             "Hubo un error al tratar de eliminar el área", QtWidgets.QMessageBox.Ok)
+    
+    def eliminar(self):
+         if aArea.tamañoMantenimientoArea() == 0:
+              QtWidgets.QMessageBox.information(self,"Eliminar Área",
+             "No existe Área seleccionada para eliminar", QtWidgets.QMessageBox.Ok)
+         else:
+             fila = self.tblAreas.selectedItems()
+             if fila:
+                indiceFila = fila[0].row()
+                idArea = self.tblAreas.item(indiceFila, 0).text()
+                pos = aArea.buscarArea(idArea)
+                aArea.eliminarArea(pos)
+                aArea.grabar()
+                self.listarDatos()
+             else:
+                 QtWidgets.QMessageBox.information(self,"Eliminar Área",
+                 "Hubo un error al tratar de eliminar el área", QtWidgets.QMessageBox.Ok)
     #
     # def modificar(self):
     #     if aArea.tamañoMantenimientoArea() == 0:
