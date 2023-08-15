@@ -21,7 +21,7 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
 
     def listarDatos(self):
         self.tblEspecialidad.setRowCount(aEspe.tamañoMantenimientoEspecialidad())
-        self.tblEspecialidad.setColumCount(2)
+        self.tblEspecialidad.setColumnCount(2)
         self.tblEspecialidad.verticalHeader().setVisible(False)
 
         for i in range(0, aEspe.tamañoMantenimientoEspecialidad()):
