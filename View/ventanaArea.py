@@ -14,16 +14,16 @@ class ventanaArea(QtWidgets.QMainWindow):
         self.show()
     
     def obtenerIdArea(self):
-        return self
+        return self.txtId.text()
 
     def obtenerNumeroOficinas(self):
-        return self
+        return self.txtNumeroOficinas.text()
 
     def obtenerNumeroCamas(self):
-        return self
+        return self.txtNumeroCamas.text()
     
     def obtenerMt2(self):
-        return self
+        return self.txtNumeroMt2.text()
 
     def listarDatos(self):
         self.tblAreas.setRowCount(aArea.tamañoMantenimientoArea())
@@ -83,7 +83,7 @@ class ventanaArea(QtWidgets.QMainWindow):
 
             if pos != -1:
                 objArea = aArea.devolverArea(pos)
-                self.txt.setText(objArea.getIdArea())
-                self.txt.setText(objArea.getNumeroOficinas())
-                self.txt.setText(objArea.getNumeroCamas())
-                self.txt.setText(objArea.getMt2())
+                self.txtId.setText(objArea.getIdArea())
+                self.txtNumeroOficinas.setText(objArea.getNumeroOficinas())
+                self.txtNumeroCamas.setText(objArea.getNumeroCamas())
+                self.txtMt2.setText(objArea.getMt2())
