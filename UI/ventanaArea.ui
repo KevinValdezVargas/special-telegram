@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -35,23 +35,23 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Áreas Médicas</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>100</y>
-      <width>151</width>
+      <width>141</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Número de Oficinas:</string>
+     <string>N° de Oficinas:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -64,23 +64,23 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Número de Camas:</string>
+     <string>N° de Camas</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>520</x>
       <y>100</y>
       <width>51</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
      <string>Mt.2:</string>
@@ -89,14 +89,15 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>100</y>
-      <width>71</width>
+      <width>81</width>
       <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
      <string>Id Área:</string>
@@ -105,21 +106,29 @@
    <widget class="QLineEdit" name="txtId">
     <property name="geometry">
      <rect>
-      <x>12</x>
+      <x>10</x>
       <y>140</y>
       <width>131</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #303030;
+color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtNumeroOficinas">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>140</y>
       <width>141</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #303030;
+color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtNumeroCamas">
@@ -128,8 +137,12 @@
       <x>350</x>
       <y>140</y>
       <width>141</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #303030;
+color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtMt2">
@@ -138,15 +151,19 @@
       <x>520</x>
       <y>140</y>
       <width>131</width>
-      <height>20</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #303030;
+color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QTableWidget" name="tblAreas">
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>170</y>
+      <y>180</y>
       <width>541</width>
       <height>341</height>
      </rect>
@@ -156,11 +173,14 @@
 
 color: white;
 border:none;
-	font: 11pt &quot;MS Shell Dlg 2&quot;;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+background-color: #303030;
+
 }
 QHeaderView::section{
 background-color: #303030;
 color: white;
+
 }</string>
     </property>
     <attribute name="horizontalHeaderDefaultSectionSize">
@@ -193,13 +213,13 @@ color: white;
       <x>34</x>
       <y>220</y>
       <width>91</width>
-      <height>23</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(9, 9, 9);
-color: rgb(253, 253, 253);</string>
+background-color: #303030;
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Registrar</string>
@@ -211,13 +231,13 @@ color: rgb(253, 253, 253);</string>
       <x>34</x>
       <y>390</y>
       <width>91</width>
-      <height>23</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(9, 9, 9);
-color: rgb(253, 253, 253);</string>
+background-color: #303030;
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Eliminar</string>
@@ -229,13 +249,13 @@ color: rgb(253, 253, 253);</string>
       <x>34</x>
       <y>340</y>
       <width>91</width>
-      <height>23</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(9, 9, 9);
-color: rgb(253, 253, 253);</string>
+background-color: #303030;
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Modificar</string>
@@ -247,32 +267,16 @@ color: rgb(253, 253, 253);</string>
       <x>34</x>
       <y>280</y>
       <width>91</width>
-      <height>23</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(9, 9, 9);
-color: rgb(253, 253, 253);</string>
+background-color: #303030;
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Actualizar</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>20</y>
-      <width>121</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 28pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>ÁREA</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -294,10 +298,10 @@ color: rgb(253, 253, 253);</string>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>20</y>
+      <x>570</x>
+      <y>10</y>
       <width>121</width>
-      <height>61</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="text">
@@ -308,6 +312,26 @@ color: rgb(253, 253, 253);</string>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>ÁREA</string>
     </property>
    </widget>
    <zorder>label_6</zorder>
@@ -324,8 +348,8 @@ color: rgb(253, 253, 253);</string>
    <zorder>btnEliminar</zorder>
    <zorder>btnModificar</zorder>
    <zorder>btnActualizar</zorder>
-   <zorder>label</zorder>
    <zorder>label_7</zorder>
+   <zorder>label_8</zorder>
   </widget>
  </widget>
  <resources/>
