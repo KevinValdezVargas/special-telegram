@@ -78,4 +78,4 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
     #         if pos != -1:
     #             objEspe = aEspe.devolverEspecialidad(pos)
     #             self.txtId.setText(objEspe.getIdEspecialidad())
-    #             self.txtEspecialidad.setText(objEspe.setEspecialidad())
+    #             self.txtEspecialidad.setText(objEspe.getEspecialidad())
