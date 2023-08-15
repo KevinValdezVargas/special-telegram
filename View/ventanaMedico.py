@@ -9,39 +9,27 @@ class ventanaMedico(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaMedico,self).__init__(parent)
         uic.loadUi("UI/ventanaMedico.ui",self)
-        self.btnRegistrar.clicked.connect(self.registrar)
-        self.btnEliminar.clicked.connect(self.eliminar)
-        self.btnModificar.clicked.connect(self.modificar)
-        self.btnActualizar.clicked.connect(self.grabar)
-        self.listarDatos()
+        #COLOCAR LOS BOTONES(btn)
+        # self.listarDatos()
         self.show()
 
-    def obtenerCodigo(self):
-        return self.txtCodigo.text()
-    
-    def obtenerNombres(self):
-        return self.txtNombres.text()
-    
-    def obtenerApellidos(self):
-        return self.txtApellidos.text()
-    
-    def obtenerCmp(self):
-        return self.txtCmp.text()
-    
-    def obtenerIdEspecialidad(self):
-        return self.txtId.text()
-    
-    def listarDatos(self):
-        self.tblMedicos.setRowCount(aMed.tamañoMantenimientoMedico())
-        self.tblMedicos.setColumnCount(5)
-        self.tblMedicos.verticalHeader().setVisible(False)
-
-        for i in range(0, aMed.tamañoMantenimientoMedico()):
-            self.tblMedicos.setItem(i,0,QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getCodigo()))
-            self.tblMedicos.setItem(i,1,QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getNombres()))
-            self.tblMedicos.setItem(i,2,QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getApellidos()))
-            self.tblMedicos.setItem(i,3,QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getCmp()))
-            self.tblMedicos.setItem(i,4,QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getIdEspecialidad()))
+    # def obtenerCodigo(self):
+    #     return self
+    #
+    # def obtenerNombres(self):
+    #     return self
+    #
+    # def obtenerApellidos(self):
+    #     return self
+    #
+    # def obtenerCmp(self):
+    #     return self
+    #
+    # def obtenerIdEspecialidad(self):
+    #     return self
+    #
+    # def listarDatos(self):
+    #     self #COLOCAR LOS TABLES(tbl)
 
     def grabar(self):
         try:
@@ -54,7 +42,7 @@ class ventanaMedico(QtWidgets.QMainWindow):
             aMed.grabar()
             self.listarDatos()
         except:
-            QtWidgets.QMessageBox.information(self,"Registrar medico", 
+            QtWidgets.QMessageBox.information(self,"Registrar medico",
             "Ha ocurrido un error al registrar el cliente", QtWidgets.QMessageBox.Ok)
 
     def registrar(self):
@@ -66,7 +54,7 @@ class ventanaMedico(QtWidgets.QMainWindow):
         self.listarDatos()
         QtWidgets.QMessageBox.information(self, "Registar medico",
             "Medico registrado con exito!", QtWidgets.QMessageBox.Ok)
-        
+
     def eliminar(self):
 
         if aMed.tamañoMantenimientoMedico() == 0:
