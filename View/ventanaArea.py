@@ -14,8 +14,8 @@ class ventanaArea(QtWidgets.QMainWindow):
         self.btnRegistrar.clicked.connect(self.registrar)
         self.btnEliminar.clicked.connect(self.eliminar)
 
-        # self.btnModificar.clicked.connect(self.modificar)
-        # self.btnActualizar.clicked.connect(self.grabar)
+        self.btnModificar.clicked.connect(self.modificar)
+        self.btnActualizar.clicked.connect(self.grabar)
 
         self.listarDatos()
         self.show()
@@ -44,18 +44,18 @@ class ventanaArea(QtWidgets.QMainWindow):
              self.tblAreas.setItem(i,3,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getMt2()))
 
 
-    # def grabar(self):
-    #     try:
-    #         pos = aArea.buscarArea(self.obtenerIdArea())
-    #         objArea = aArea.devolverArea(pos)
-    #         objArea.setNumeroOficinas(self.obtenerNumeroOficinas())
-    #         objArea.setNumeroCamas(self.obtenerNumeroCamas())
-    #         objArea.setMt2(self.obtenerMt2())
-    #         aArea.grabar()
-    #         self.listarDatos()
-    #     except:
-    #         QtWidgets.QMessageBox.information(self,"Registrar Área", "Ha ocurrido un error al registrar el Área", QtWidgets.QMessageBox.Ok)
-    #
+    def grabar(self):
+        try:
+            pos = aArea.buscarArea(self.obtenerIdArea())
+            objArea = aArea.devolverArea(pos)
+            objArea.setNumeroOficinas(self.obtenerNumeroOficinas())
+            objArea.setNumeroCamas(self.obtenerNumeroCamas())
+            objArea.setMt2(self.obtenerMt2())
+            aArea.grabar()
+            self.listarDatos()
+        except:
+            QtWidgets.QMessageBox.information(self,"Registrar Área", "Ha ocurrido un error al registrar el Área", QtWidgets.QMessageBox.Ok)
+    
     def registrar(self):
          objArea = controllerArea(self.obtenerIdArea(), self.obtenerNumeroOficinas(), self.obtenerNumeroCamas(), self.obtenerMt2())
          aArea.adicionarArea(objArea)
@@ -80,18 +80,18 @@ class ventanaArea(QtWidgets.QMainWindow):
              else:
                  QtWidgets.QMessageBox.information(self,"Eliminar Área",
                  "Hubo un error al tratar de eliminar el área", QtWidgets.QMessageBox.Ok)
-    #
-    # def modificar(self):
-    #     if aArea.tamañoMantenimientoArea() == 0:
-    #         QtWidgets.QMessageBox.information(self, "Modificar Área...",
-    #         "No se encontraron registros para el ID Ingresado a buscar", QtWidgets.QMessageBox.Ok)
-    #     else:
-    #         idArea, _ = QtWidgets.QInputDialog.getText(self,"Buscar Área", "Ingrese el ID a Modificar")
-    #         pos = aArea.buscarArea(idArea)
-    #
-    #         if pos != -1:
-    #             objArea = aArea.devolverArea(pos)
-    #             self.txtId.setText(objArea.getIdArea())
-    #             self.txtNumeroOficinas.setText(objArea.getNumeroOficinas())
-    #             self.txtNumeroCamas.setText(objArea.getNumeroCamas())
-    #             self.txtMt2.setText(objArea.getMt2())
+    
+    def modificar(self):
+        if aArea.tamañoMantenimientoArea() == 0:
+            QtWidgets.QMessageBox.information(self, "Modificar Área...",
+            "No se encontraron registros para el ID Ingresado a buscar", QtWidgets.QMessageBox.Ok)
+        else:
+            idArea, _ = QtWidgets.QInputDialog.getText(self,"Buscar Área", "Ingrese el ID a Modificar")
+            pos = aArea.buscarArea(idArea)
+    
+            if pos != -1:
+                objArea = aArea.devolverArea(pos)
+                self.txtId.setText(objArea.getIdArea())
+                self.txtNumeroOficinas.setText(objArea.getNumeroOficinas())
+                self.txtNumeroCamas.setText(objArea.getNumeroCamas())
+                self.txtMt2.setText(objArea.getMt2())
