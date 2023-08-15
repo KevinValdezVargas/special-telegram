@@ -174,7 +174,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtEspecialidad">
+   <widget class="QLineEdit" name="txtId">
     <property name="geometry">
      <rect>
       <x>30</x>
