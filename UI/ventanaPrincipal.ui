@@ -32,9 +32,48 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Sistema de Ventas V1.0</string>
+   <string>Sistema Clinica</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(220, 255, 243);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>361</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../Downloads/hospital-clinic-building-3d-icon-illustration-png.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>50</y>
+      <width>361</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 48pt &quot;Niagara Solid&quot;;</string>
+    </property>
+    <property name="text">
+     <string>CENTRO MEDICO ZEGEL</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -80,7 +119,7 @@
   <action name="actionMedicos">
    <property name="icon">
     <iconset>
-     <normaloff>../View/images/customer.png</normaloff>../View/images/customer.png</iconset>
+     <normaloff>../View/icon/doctor.png</normaloff>../View/icon/doctor.png</iconset>
    </property>
    <property name="text">
     <string>Médicos</string>
@@ -94,7 +133,7 @@
   <action name="actionEspecialidades">
    <property name="icon">
     <iconset>
-     <normaloff>../View/images/employee.png</normaloff>../View/images/employee.png</iconset>
+     <normaloff>../View/icon/especialidades.png</normaloff>../View/icon/especialidades.png</iconset>
    </property>
    <property name="text">
     <string>Especialidades</string>
@@ -108,7 +147,7 @@
   <action name="actionAreas">
    <property name="icon">
     <iconset>
-     <normaloff>../View/images/producto.png</normaloff>../View/images/producto.png</iconset>
+     <normaloff>../View/icon/area.png</normaloff>../View/icon/area.png</iconset>
    </property>
    <property name="text">
     <string>Áreas</string>
