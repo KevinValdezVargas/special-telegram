@@ -12,7 +12,7 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
         #COLOCAR LOS BOTONES(btn)
         self.listarDatos()
         self.show()
-    
+
     def obtenerIdEspecialidad(self):
         return self
 
@@ -27,7 +27,7 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
         for i in range(0, aEspe.tamañoMantenimientoEspecialidad()):
             self.tblEspecialidad.setItem(i,0,QtWidgets.QTableWidgetItem(aEspe.devolverEspecialidad(i).getIdEspecialidad()))
             self.tblEspecialidad.setItem(i,1,QtWidgets.QTableWidgetItem(aEspe.devolverEspecialidad(i).getEspecialidad()))
-    
+
     def grabar(self):
         try:
             pos = aEspe.buscarEspecialidad(self.obtenerIdEspecialidad())
@@ -37,7 +37,7 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
             self.listarDatos()
         except:
             QtWidgets.QMessageBox.information(self,"Registrar Especialidad", "Ha ocurrido un error al registrar la especialidad", QtWidgets.QMessageBox.Ok)
-    
+
     def registrar(self):
         objEspe = controllerEspecialidad(self.obtenerIdEspecialidad(), self.obtenerEspecialidad())
         aEspe.adicionarEspecialidad(objEspe )
@@ -50,7 +50,7 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
         if aEspe.tamañoMantenimientoEspecialidad() == 0:
              QtWidgets.QMessageBox.information(self,"Eliminar Especialidad",
             "No existe Especialidad seleccionada para eliminar", QtWidgets.QMessageBox.Ok)
-        else: 
+        else:
             fila = self.tblEspecialidad.selectedItems()
             if fila:
                 indiceFila = fila[0].row()

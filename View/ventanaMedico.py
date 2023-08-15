@@ -15,19 +15,19 @@ class ventanaMedico(QtWidgets.QMainWindow):
 
     def obtenerCodigo(self):
         return self
-    
+
     def obtenerNombres(self):
         return self
-    
+
     def obtenerApellidos(self):
         return self
-    
+
     def obtenerCmp(self):
         return self
-    
+
     def obtenerIdEspecialidad(self):
         return self
-    
+
     def listarDatos(self):
         self #COLOCAR LOS TABLES(tbl)
 
@@ -42,7 +42,7 @@ class ventanaMedico(QtWidgets.QMainWindow):
             aMed.grabar()
             self.listarDatos()
         except:
-            QtWidgets.QMessageBox.information(self,"Registrar medico", 
+            QtWidgets.QMessageBox.information(self,"Registrar medico",
             "Ha ocurrido un error al registrar el cliente", QtWidgets.QMessageBox.Ok)
 
     def registrar(self):
@@ -54,7 +54,7 @@ class ventanaMedico(QtWidgets.QMainWindow):
         self.listarDatos()
         QtWidgets.QMessageBox.information(self, "Registar medico",
             "Medico registrado con exito!", QtWidgets.QMessageBox.Ok)
-        
+
     def eliminar(self):
 
         if aMed.tamañoMantenimientoMedico() == 0:
