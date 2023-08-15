@@ -9,18 +9,18 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaEspecialidad,self).__init__(parent)
         uic.loadUi("UI/ventanaEspecialidad.ui",self)
-        #self.btnRegistrar().clicked.connect(self.registrar)
-        #self.btnEliminar().clicked.connect(self.eliminar)
-        #self.btnModificar().clicked.connect(self.modificar)
-        #self.btnActualizar().clicked.connect(self.actualizar)
+        self.btnRegistrar.clicked.connect(self.registrar)
+        #self.btnEliminar.clicked.connect(self.eliminar)
+        #self.btnModificar.clicked.connect(self.modificar)
+        #self.btnActualizar.clicked.connect(self.actualizar)
         self.listarDatos()
         self.show()
 
-    # def obtenerIdEspecialidad(self):
-    #     return self.txtId.text()
-    #
-    # def obtenerEspecialidad(self):
-    #     return self.txtEspecialidad.text()
+    def obtenerIdEspecialidad(self):
+        return self.txtId.text()
+
+    def obtenerEspecialidad(self):
+        return self.txtEspecialidad.text()
 
     def listarDatos(self):
         self.tblEspecialidad.setRowCount(aEspe.tamañoMantenimientoEspecialidad())
@@ -41,15 +41,15 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
     #         self.listarDatos()
     #     except:
     #         QtWidgets.QMessageBox.information(self,"Registrar Especialidad", "Ha ocurrido un error al registrar la especialidad", QtWidgets.QMessageBox.Ok)
-    #
-    # def registrar(self):
-    #     objEspe = controllerEspecialidad(self.obtenerIdEspecialidad(), self.obtenerEspecialidad())
-    #     aEspe.adicionarEspecialidad(objEspe)
-    #     aEspe.grabar()
-    #     self.ListarDatos()
-    #     QtWidgets.QMessageBox.information(self,"Registrar Especialidad",
-    #     "Especialidad Registrada con Exito", QtWidgets.QMessageBox.Ok)
-    #
+
+    def registrar(self):
+        objEspe = controllerEspecialidad(self.obtenerIdEspecialidad(), self.obtenerEspecialidad())
+        aEspe.adicionarEspecialidad(objEspe)
+        aEspe.grabar()
+        self.listarDatos()
+        QtWidgets.QMessageBox.information(self,"Registrar Especialidad",
+        "Especialidad Registrada con Exito", QtWidgets.QMessageBox.Ok)
+
     # def eliminar(self):
     #     if aEspe.tamañoMantenimientoEspecialidad() == 0:
     #          QtWidgets.QMessageBox.information(self,"Eliminar Especialidad",

@@ -11,9 +11,9 @@ class ventanaMedico(QtWidgets.QMainWindow):
         uic.loadUi("UI/ventanaMedico.ui",self)
         #COLOCAR LOS BOTONES(btn)
         self.btnRegistrar.clicked.connect(self.registrar)
-        self.btnEliminar.clicked.connect(self.eliminar)
-        self.btnModificar.clicked.connect(self.modificar)
-        self.btnActualizar.clicked.connect(self.grabar)
+        # self.btnEliminar.clicked.connect(self.eliminar)
+        # self.btnModificar.clicked.connect(self.modificar)
+        # self.btnActualizar.clicked.connect(self.grabar)
         self.listarDatos()
         self.show()
 
@@ -61,7 +61,7 @@ class ventanaMedico(QtWidgets.QMainWindow):
     def registrar(self):
 
         objMed = controllerMedico(self.obtenerCodigo(),self.obtenerNombres(),
-                                  self.obtenerApellidos(),self.obtenerCmp(),self.obtenerIdEspecialidad)
+                                  self.obtenerApellidos(),self.obtenerCmp(),self.obtenerIdEspecialidad())
         aMed.adicionarMedico(objMed)
         aMed.grabar()
         self.listarDatos()
