@@ -10,8 +10,11 @@ class ventanaArea(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaArea,self).__init__(parent)
         uic.loadUi("UI/ventanaArea.ui",self)
-        #COLOCAR LOS BOTONES(btn)
-        # self.listarDatos()
+        self.btnRegistrar.clicked.connect(self.registrar)
+        self.btnEliminar.clicked.connect(self.eliminar)
+        self.btnModificar.clicked.connect(self.modificar)
+        self.btnActualizar.clicked.connect(self.grabar)
+        self.listarDatos()
         self.show()
     
     def obtenerIdArea(self):
@@ -26,17 +29,17 @@ class ventanaArea(QtWidgets.QMainWindow):
     def obtenerMt2(self):
         return self
 
-    # def listarDatos(self):
-    #     self.tblAreas.setRowCount(aArea.tamañoMantenimientoArea())
-    #     self.tblAreas.setColumCount(4)
-    #     self.tblAreas.verticalHeader().setVisible(False)
-    #
-    #     for i in range(0, aArea.tamañoMantenimientoArea()):
-    #         self.tblAreas.setItem(i,0,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getIdArea()))
-    #         self.tblAreas.setItem(i,1,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getNumeroOficinas()))
-    #         self.tblAreas.setItem(i,2,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getNumeroCamas()))
-    #         self.tblAreas.setItem(i,3,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getMt2()))
-    #
+    def listarDatos(self):
+         self.tblAreas.setRowCount(aArea.tamañoMantenimientoArea())
+         self.tblAreas.setColumnCount(4)
+         self.tblAreas.verticalHeader().setVisible(False)
+    
+         for i in range(0, aArea.tamañoMantenimientoArea()):
+             self.tblAreas.setItem(i,0,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getIdArea()))
+             self.tblAreas.setItem(i,1,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getNumeroOficinas()))
+             self.tblAreas.setItem(i,2,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getNumeroCamas()))
+             self.tblAreas.setItem(i,3,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getMt2()))
+    
     # def grabar(self):
     #     try:
     #         pos = aArea.buscarArea(self.obtenerIdArea())
