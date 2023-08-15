@@ -260,7 +260,7 @@
      <string>MODIFICAR</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QTableWidget" name="tblMedicos">
     <property name="geometry">
      <rect>
       <x>30</x>
