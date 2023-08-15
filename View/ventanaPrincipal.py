@@ -27,5 +27,5 @@ class VentanaPrincipal(QtWidgets.QMainWindow):
         vAreas = ventanaArea(self)
         vAreas.show()
 
-#     def cerrar(self):
-#         self.close()
+    def cerrar(self):
+        self.close()
