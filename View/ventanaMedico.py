@@ -10,26 +10,39 @@ class ventanaMedico(QtWidgets.QMainWindow):
         super(ventanaMedico,self).__init__(parent)
         uic.loadUi("UI/ventanaMedico.ui",self)
         #COLOCAR LOS BOTONES(btn)
-        # self.listarDatos()
+        self.btnRegistrar.clicked.connect(self.registrar)
+        self.btnEliminar.clicked.connect(self.eliminar)
+        self.btnModificar.clicked.connect(self.modificar)
+        self.btnActualizar.clicked.connect(self.grabar)
+        self.listarDatos()
         self.show()
 
-    # def obtenerCodigo(self):
-    #     return self
-    #
-    # def obtenerNombres(self):
-    #     return self
-    #
-    # def obtenerApellidos(self):
-    #     return self
-    #
-    # def obtenerCmp(self):
-    #     return self
-    #
-    # def obtenerIdEspecialidad(self):
-    #     return self
-    #
-    # def listarDatos(self):
-    #     self #COLOCAR LOS TABLES(tbl)
+    def obtenerCodigo(self):
+        return self.txtCodigo.text()
+
+    def obtenerNombres(self):
+        return self.txtNombres.text()
+
+    def obtenerApellidos(self):
+        return self.txtApellidos.text()
+
+    def obtenerCmp(self):
+        return self.txtCmp.text()
+
+    def obtenerIdEspecialidad(self):
+        return self.txtId.text()
+
+    def listarDatos(self):
+        self.tblMedicos.setRowCount(aMed.tamañoMantenimientoMedico())
+        self.tblMedicos.setColumnCount(5)
+        self.tblMedicos.verticalHeader().setVisible(False)
+
+        for i in range(0, aMed.tamañoMantenimientoMedico()):
+            self.tblMedicos.setItem(i, 0, QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getCodigo()))
+            self.tblMedicos.setItem(i, 1, QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getNombres()))
+            self.tblMedicos.setItem(i, 2, QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getApellidos()))
+            self.tblMedicos.setItem(i, 3, QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getCmp()))
+            self.tblMedicos.setItem(i, 4, QtWidgets.QTableWidgetItem(aMed.devolverMedico(i).getIdEspecialidad()))
 
     def grabar(self):
         try:
@@ -83,7 +96,7 @@ class ventanaMedico(QtWidgets.QMainWindow):
             pos = aMed.buscarMedico(codigo)
             if pos != -1:
                 objMed = aMed.devolverMedico(pos)
-                #self.txtCodigo.setText(objMed.getCodigo())
+                self.txtCodigo.setText(objMed.getCodigo())
                 self.txtNombres.setText(objMed.getNombres())
                 self.txtApellidos.setText(objMed.getApellidos())
                 self.txtCmp.setText(objMed.getCmp())

@@ -14,6 +14,7 @@ class ventanaArea(QtWidgets.QMainWindow):
         self.btnEliminar.clicked.connect(self.eliminar)
         self.btnModificar.clicked.connect(self.modificar)
         self.btnActualizar.clicked.connect(self.grabar)
+
         self.listarDatos()
         self.show()
     
@@ -39,7 +40,8 @@ class ventanaArea(QtWidgets.QMainWindow):
              self.tblAreas.setItem(i,1,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getNumeroOficinas()))
              self.tblAreas.setItem(i,2,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getNumeroCamas()))
              self.tblAreas.setItem(i,3,QtWidgets.QTableWidgetItem(aArea.devolverArea(i).getMt2()))
-    
+
+
     # def grabar(self):
     #     try:
     #         pos = aArea.buscarArea(self.obtenerIdArea())

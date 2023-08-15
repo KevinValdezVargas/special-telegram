@@ -6,8 +6,8 @@ class arregloEspecialidad:
         self.dataEspecialidad = []
         self.cargar()
 
-    def adicionarEspecialidad(self, objEspe):
-        self.dataEspecialidad.append(objEspe)
+    def adicionarEspecialidad(self, objEspecialidad):
+        self.dataEspecialidad.append(objEspecialidad)
 
     def devolverEspecialidad(self, pos):
         return self.dataEspecialidad[pos]
