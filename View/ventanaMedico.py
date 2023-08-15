@@ -9,9 +9,9 @@ class ventanaMedico(QtWidgets.QMainWindow):
     def __init__(self, parent = None):
         super(ventanaMedico,self).__init__(parent)
         uic.loadUi("UI/ventanaMedico.ui",self)
-        #COLOCAR LOS BOTONES(btn)
         self.btnRegistrar.clicked.connect(self.registrar)
-        # self.btnEliminar.clicked.connect(self.eliminar)
+        self.btnEliminar.clicked.connect(self.eliminar)
+        
         # self.btnModificar.clicked.connect(self.modificar)
         # self.btnActualizar.clicked.connect(self.grabar)
         self.listarDatos()
