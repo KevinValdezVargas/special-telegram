@@ -169,7 +169,8 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtNombres">
@@ -183,7 +184,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtApellidos">
@@ -197,7 +199,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtCmp">
@@ -211,7 +214,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtId">
@@ -225,7 +229,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnRegistrar">
@@ -325,32 +330,32 @@ color: rgb(249, 249, 249);</string>
      <rect>
       <x>10</x>
       <y>240</y>
-      <width>561</width>
-      <height>241</height>
+      <width>615</width>
+      <height>245</height>
      </rect>
     </property>
     <property name="minimumSize">
      <size>
-      <width>561</width>
-      <height>241</height>
+      <width>615</width>
+      <height>245</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
-      <width>561</width>
-      <height>241</height>
+      <width>615</width>
+      <height>245</height>
      </size>
     </property>
     <property name="sizeIncrement">
      <size>
-      <width>561</width>
-      <height>241</height>
+      <width>615</width>
+      <height>245</height>
      </size>
     </property>
     <property name="baseSize">
      <size>
-      <width>561</width>
-      <height>241</height>
+      <width>615</width>
+      <height>245</height>
      </size>
     </property>
     <property name="font">
@@ -367,16 +372,23 @@ color: rgb(249, 249, 249);</string>
 
 color: white;
 border:none;
-	font: 11pt &quot;MS Shell Dlg 2&quot;;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
 background-color: #303030;
 }
 QHeaderView::section{
 background-color: #303030;
 color: white;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
 }</string>
     </property>
     <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>112</number>
+     <number>123</number>
+    </attribute>
+    <attribute name="horizontalHeaderHighlightSections">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>39</number>
     </attribute>
     <column>
      <property name="text">
@@ -400,7 +412,7 @@ color: white;
     </column>
     <column>
      <property name="text">
-      <string>ID ESPECIALIDAD</string>
+      <string>  ID ESPECIALIDAD</string>
      </property>
     </column>
    </widget>
@@ -447,8 +459,8 @@ color: white;
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>390</y>
+      <x>640</x>
+      <y>410</y>
       <width>101</width>
       <height>71</height>
      </rect>

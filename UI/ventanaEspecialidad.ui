@@ -87,7 +87,8 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtEspecialidad">
@@ -101,7 +102,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: #303030;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -236,12 +238,15 @@ color: white;
 border:none;
 	font: 11pt &quot;MS Shell Dlg 2&quot;;
 background-color: #303030;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
 
 }
 QHeaderView::section{
 background-color: #303030;
 color: white;
-}</string>
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+}
+</string>
     </property>
     <attribute name="horizontalHeaderDefaultSectionSize">
      <number>150</number>
