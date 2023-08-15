@@ -10,7 +10,7 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
         super(ventanaEspecialidad,self).__init__(parent)
         uic.loadUi("UI/ventanaEspecialidad.ui",self)
         #COLOCAR LOS BOTONES(btn)
-        # self.listarDatos()
+        self.listarDatos()
         self.show()
 
     # def obtenerIdEspecialidad(self):
@@ -19,14 +19,15 @@ class ventanaEspecialidad(QtWidgets.QMainWindow):
     # def obtenerEspecialidad(self):
     #     return self
 
-    # def listarDatos(self):
-    #     self.tblEspecialidad.setRowCount(aEspe.tamañoMantenimientoEspecialidad())
-    #     self.tblEspecialidad.setColumCount(2)
-    #     self.tblEspecialidad.verticalHeader().setVisible(False)
-    #
-    #     for i in range(0, aEspe.tamañoMantenimientoEspecialidad()):
-    #         self.tblEspecialidad.setItem(i,0,QtWidgets.QTableWidgetItem(aEspe.devolverEspecialidad(i).getIdEspecialidad()))
-    #         self.tblEspecialidad.setItem(i,1,QtWidgets.QTableWidgetItem(aEspe.devolverEspecialidad(i).getEspecialidad()))
+    def listarDatos(self):
+        self.tblEspecialidad.setRowCount(aEspe.tamañoMantenimientoEspecialidad())
+        self.tblEspecialidad.setColumnCount(2)
+        self.tblEspecialidad.verticalHeader().setVisible(False)
+
+        for i in range(0, aEspe.tamañoMantenimientoEspecialidad()):
+            self.tblEspecialidad.setItem(i,0,QtWidgets.QTableWidgetItem(aEspe.devolverEspecialidad(i).getIdEspecialidad()))
+            self.tblEspecialidad.setItem(i,1,QtWidgets.QTableWidgetItem(aEspe.devolverEspecialidad(i).getEspecialidad()))
+
     #
     # def grabar(self):
     #     try:

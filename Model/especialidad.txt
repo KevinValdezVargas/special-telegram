@@ -1,0 +1,5 @@
+1, Cardiología
+2, Oftalmología
+3, Pediatría
+4, Odontología
+5, Dermatología

@@ -15,10 +15,10 @@ class controllerArea:
     def getIdArea(self):
         return self.__idArea
     
-    def getnumeroOficinas(self):
+    def getNumeroOficinas(self):
         return self.__numeroOficinas
 
-    def getnumeroCamas(self):
+    def getNumeroCamas(self):
         return self.__numeroCamas
     
     def getMt2(self):
