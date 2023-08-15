@@ -14,14 +14,14 @@ class ventanaArea(QtWidgets.QMainWindow):
         # self.listarDatos()
         self.show()
     
-    # def obtenerIdArea(self):
-    #     return self
-    #
-    # def obtenerNumeroOficinas(self):
-    #     return self
-    #
-    # def obtenerNumeroCamas(self):
-    #     return self
+    def obtenerIdArea(self):
+        return self
+
+    def obtenerNumeroOficinas(self):
+        return self
+
+    def obtenerNumeroCamas(self):
+        return self
     
     def obtenerMt2(self):
         return self
