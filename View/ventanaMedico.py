@@ -95,7 +95,7 @@ class ventanaMedico(QtWidgets.QMainWindow):
             pos = aMed.buscarMedico(codigo)
             if pos != -1:
                 objMed = aMed.devolverMedico(pos)
-                self.txtCodigo.setText(objMed.getCodigo())
+                #self.txtCodigo.setText(objMed.getCodigo())
                 self.txtNombres.setText(objMed.getNombres())
                 self.txtApellidos.setText(objMed.getApellidos())
                 self.txtCmp.setText(objMed.getCmp())
