@@ -36,10 +36,10 @@ class arregloArea:
         for linea in archivo.readlines():
             columna = str(linea).split(",")
             idArea = columna[0]
-            n_Oficinas = columna[1]
-            n_Camas = columna[2]
+            numeroOficinas = columna[1]
+            numeroCamas = columna[2]
             mt2 = columna[3].strip()
-            objArea = controllerArea(idArea, n_Oficinas, n_Camas, mt2)
+            objArea = controllerArea(idArea, numeroOficinas, numeroCamas, mt2)
             self.adicionarArea(objArea)
         archivo.close()
 
@@ -47,7 +47,7 @@ class arregloArea:
         archivo = open("Model/area.txt", "w+", encoding="UTF-8")
         for i in range(self.tamañoMantenimientoArea()):
             archivo.write(str(self.devolverCliente(i).getDni()) + ","
-            + str(self.devolverArea(i).getN_Oficinas()) + ","
-            + str(self.devolverArea(i).getN_Camas()) + ","
+            + str(self.devolverArea(i).getnumeroOficinas()) + ","
+            + str(self.devolverArea(i).getnumeroCamas()) + ","
             + str(self.devolverArea(i).getMt2()) + "\n")
         archivo.close()
